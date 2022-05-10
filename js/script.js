@@ -2,6 +2,8 @@
 // Created on: May 2022
 // This file contains the JS functions for index.html
 
+'use strict'
+
 /**
  * Check service worker.
  */
@@ -23,6 +25,8 @@ function calculate() {
   var answer = 0
   const NUMERATOR = 4
   var denominator = 1
+  var temp = "plus"
+  var temp = "minus"
 
   if (userInput < 0)
   {
@@ -31,10 +35,10 @@ function calculate() {
 
   while (counter < userInput) {
     console.log("Once through loop:" + counter)
-    if (counter % 2 == 0) {
+    if (temp == "plus") {
       denominator += 2
       answer += NUMERATOR / denominator
-    } else if (counter % 2 == 1) {
+    } else if (temp == "minus") {
       denominator += 2
       answer += - (NUMERATOR / denominator)
     }
