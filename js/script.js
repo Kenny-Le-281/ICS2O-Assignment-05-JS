@@ -27,23 +27,22 @@ function calculate() {
   var denominator = 1
   let userInputInt = parseInt(userInput)
 
-  if (userInputInt < 0)
-  {
+  if (userInputInt < 0) {
     document.getElementById("answer").innerHTML = "Please input a positive whole number!"
   } else {
-      while (counter < userInputInt) {
-        console.log("Once through loop:" + counter)
-        if (counter % 2 == 0) {
-          denominator = counter * 2 + 1
-          answer += NUMERATOR / denominator
-        } else {
-          denominator = counter * 2 + 1
-          answer += - (NUMERATOR / denominator)
-        }
-      counter++
+    while (counter < userInputInt) {
+      console.log("Once through loop:" + counter)
+      if (counter % 2 == 0) {
+        denominator = counter * 2 + 1
+        answer += NUMERATOR / denominator
+      } else {
+        denominator = counter * 2 + 1
+        answer += - (NUMERATOR / denominator)
       }
+    counter++
+    }
 
-  // output
-  document.getElementById("answer").innerHTML = "The value of π is " + (answer)
+    // output
+    document.getElementById("answer").innerHTML = "The value of π is " + (answer)
   }
 }
