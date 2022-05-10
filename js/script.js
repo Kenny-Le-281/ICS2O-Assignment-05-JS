@@ -21,30 +21,29 @@ function calculate() {
   var userInput = document.getElementById("user-input").value
 
   // process
+  const NUMERATOR = 4
   let counter = 0
   var answer = 0
-  const NUMERATOR = 4
   var denominator = 1
-  var temp = "plus"
-  var temp = "minus"
+  let userInputInt = parseInt(userInput)
 
-  if (userInput < 0)
+  if (userInputInt < 0)
   {
     document.getElementById("answer").innerHTML = "Please input a positive whole number!"
-  }
-
-  while (counter < userInput) {
-    console.log("Once through loop:" + counter)
-    if (temp == "plus") {
-      denominator += 2
-      answer += NUMERATOR / denominator
-    } else if (temp == "minus") {
-      denominator += 2
-      answer += - (NUMERATOR / denominator)
-    }
-    counter++
-  }
+  } else {
+      while (counter < userInputInt) {
+        console.log("Once through loop:" + counter)
+        if (counter % 2 == 0) {
+          denominator = counter * 2 + 1
+          answer += NUMERATOR / denominator
+        } else {
+          denominator = counter * 2 + 1
+          answer += - (NUMERATOR / denominator)
+        }
+      counter++
+      }
 
   // output
   document.getElementById("answer").innerHTML = "The value of π is " + (answer)
+  }
 }
