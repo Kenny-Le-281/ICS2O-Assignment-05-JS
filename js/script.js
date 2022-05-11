@@ -31,7 +31,6 @@ function calculate() {
     document.getElementById("answer").innerHTML = "Please input a positive whole number!"
   } else {
     while (counter < userInputInt) {
-      console.log("Once through loop:" + counter)
       if (counter % 2 == 0) {
         denominator = counter * 2 + 1
         answer += NUMERATOR / denominator
