@@ -13,9 +13,23 @@ body {
   background-color: beige;
 }
 
-p {
+h4 {
   color: black;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
+  padding-top: 5pt;
+}
+
+h5 {
+  color: black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  padding-top: 5pt;
+}
+
+#answer {
+  color: black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
   padding-top: 5pt;
 }
