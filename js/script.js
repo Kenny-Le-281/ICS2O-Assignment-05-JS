@@ -25,7 +25,7 @@ function calculate() {
   let counter = 0
   var answer = 0
   var denominator = 1
-  let userInputInt = parseInt(userInput)
+  var userInputInt = parseInt(userInput)
 
   if (userInputInt < 0) {
     document.getElementById("answer").innerHTML = "Please input a positive whole number!"
